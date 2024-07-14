@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            max-width: 1300px;
+            margin: auto;
+            background-color: #f2f2f2;
+            border: 1px solid black;
+            /* height: 50vh; */
+            
+        }
+        .line-with-text-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .line-with-text-container::before,
+        .line-with-text-container::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: rgb(235, 66, 94);
+        }
+
+        .line-with-text-container:not(:empty)::before {
+            margin-right: 10px; 
+            flex: none; 
+            width: 100px; 
+        }
+
+        .line-with-text-container:not(:empty)::after {
+            margin-left: 10px; 
+            flex: none; 
+            width: 100px; 
+        }
+        h2.line-with-text {
+            margin: 0;
+        }
+        .carts{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            margin: 20px;
+        }
+        .cart{
+            border-radius: 25px;
+            background-color: white;
+            height: 300px;
+        }
+        .cart img{
+            width: 100%;
+            padding: 15px;
+            border-radius: 25px;
+        }
+        .coupon-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            border: 2px dashed #FF69B4; /* Pink dashed border */
+            border-radius: 8px;
+            background-color: #FFF0F5; /* Light pink background */
+            width: fit-content;
+            margin:0px auto 0;
+             /* Center horizontally, add margin to top, none to bottom */
+            position: relative;
+            margin-right:15px;
+        }
+
+        .coupon-code {
+            font-size: 16px;
+            color: #f30d80; /* Pink text color */
+            font-weight: bold;
+            /* margin-right: 5px; */
+        }
+        .vl {
+            border-left: 2px dashed #FF69B4;
+            height: 40px;
+            margin-left:10px;
+            }
+        .copy-icon {
+            width: 50px;
+            height: 34px;
+            
+            background: url('https://in.sugarcosmetics.com/desc-images/copyIconBlack.png') no-repeat center center; /* Replace with your copy icon image */
+            background-size: auto;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .carts {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                margin: 20px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="line-with-text-container">
+            <h2 class="line-with-text">OFFERS</h2>
+        </div>
+        <div class="carts">
+            <div class="cart">
+                <img src="https://d32baadbbpueqt.cloudfront.net/Promotion/dac9f8db-7732-468b-959f-5dd03e5dcf7e.jpg" alt="">
+                <div class="coupon-container">
+                    <span class="coupon-code">BDAY400</span>
+                    <div class="vl"></div>
+                    <div class="copy-icon"></div>
+                </div>
+            </div>
+            <div class="cart">
+                <img src="https://d32baadbbpueqt.cloudfront.net/Promotion/6e7ae89e-7b5e-4cd5-a9c8-0b8500e1d2df.gif" alt="">
+                <div class="coupon-container">
+                    <span class="coupon-code">BDAY1499</span>
+                    <div class="vl"></div>
+                    <div class="copy-icon"></div>
+                </div>
+            </div>
+            <div class="cart">
+                <img src="https://d32baadbbpueqt.cloudfront.net/Promotion/0d42816a-8612-4f55-b6ac-f6d0e38c8b32.jpg" alt="">
+                <div class="coupon-container">
+                    <span class="coupon-code">BDAY999</span>
+                    <div class="vl"></div>
+                    <div class="copy-icon"></div>
+                </div>
+            </div>
+            <div class="cart">
+                <img src="https://d32baadbbpueqt.cloudfront.net/Promotion/0ac710c1-0022-4062-a589-6840a7ba9e3e.png" alt="">
+                <div class="coupon-container">
+                    <span class="coupon-code">BDAY</span>
+                    <div class="vl"></div>
+                    <div class="copy-icon"></div>
+                </div>
+            </div>
+            <div class="cart">
+                <img src="https://in.sugarcosmetics.com/_next/image?url=https://d32baadbbpueqt.cloudfront.net/Homepage/a89d9ced-86db-4daf-bf27-d817f01456cb.jpg&w=1920&q=75" alt="">
+                <div class="coupon-container">
+                    <span class="coupon-code">BDAY899</span>
+                    <div class="vl"></div>
+                    <div class="copy-icon"></div>
+                </div>
+            </div>
+            <div class="cart">
+                <img src="https://in.sugarcosmetics.com/_next/image?url=https://d32baadbbpueqt.cloudfront.net/Homepage/70839446-83c1-498b-b348-e192db0fbadb.jpg&w=1920&q=75" alt="">
+                <div class="coupon-container">
+                    <span class="coupon-code">BDAY849</span>
+                    <div class="vl"></div>
+                    <div class="copy-icon"></div>
+                </div>
+            </div>
+            <div class="cart">
+                <img src="https://in.sugarcosmetics.com/_next/image?url=https://d32baadbbpueqt.cloudfront.net/Homepage/0bdb882c-d58b-4a85-b3ca-b5ac4d681430.jpg&w=1920&q=75" alt="">
+                <div class="coupon-container">
+                    <span class="coupon-code">BDAY999</span>
+                    <div class="vl"></div>
+                    <div class="copy-icon"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
